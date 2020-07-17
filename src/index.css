@@ -13,7 +13,7 @@
   --blue: hsl(229, 64%, 46%);
   --gray: hsl(217, 16%, 45%);
   --gradient-lighter: hsl(214, 47%, 23%);
-  -gradient-darker: hsl(237, 49%, 15%);
+  --gradient-darker: hsl(237, 49%, 15%);
 }
 
 body {

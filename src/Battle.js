@@ -78,6 +78,8 @@ function Battle(props) {
       } else if (opponents.has("scissors") && opponents.has("rock")) {
         setDescription("Rock crushes Scissors");
       }
+    } else {
+      setDescription("You won! Bazinga!");
     }
   }, []);
 

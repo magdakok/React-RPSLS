@@ -18,8 +18,10 @@ const Container = styled.header`
 
 const Logo = styled.img`
   margin-top: 4px;
-  width: 28%;
-  height: 28%;
+  @media only screen and (max-width: 700px) {
+    width: 28%;
+    height: 28%;
+  }
 `;
 
 function Header(props) {

@@ -26,7 +26,6 @@ const ContainerBattle = styled(Container)`
   z-index: 5;
   /* &::before {
     content: "";
-    overflow: hidden;
     display: block;
     position: absolute;
     width: 700px;

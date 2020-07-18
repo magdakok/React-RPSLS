@@ -5,7 +5,7 @@ import Header from "./Header";
 import Battle from "./Battle";
 
 const Container = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   padding: 46px 0;
   background-image: radial-gradient(
     circle at top,

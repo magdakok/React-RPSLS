@@ -34,6 +34,7 @@ const Message = styled.div`
 
 function Battle(props) {
   const [title, setTitle] = useState(null);
+  const [description, setDescription] = useState(null);
   const [computersChoice, setComputersChoice] = useState(
     keys[Math.floor(Math.random() * keys.length)]
   );
@@ -52,6 +53,32 @@ function Battle(props) {
         props.setPoints(props.points - 1);
       }, 1100);
     }
+
+    const opponents = new Set([symbols[props.choice].name, computersChoice]);
+    console.log(opponents.size);
+    if (opponents.size === 2) {
+      if (opponents.has("scissors") && opponents.has("paper")) {
+        setDescription("Scissors cut Paper");
+      } else if (opponents.has("paper") && opponents.has("rock")) {
+        setDescription("Paper covers Rock");
+      } else if (opponents.has("rock") && opponents.has("lizard")) {
+        setDescription("Rock crushes Lizard");
+      } else if (opponents.has("lizard") && opponents.has("spock")) {
+        setDescription("Lizard poisons Spock");
+      } else if (opponents.has("spock") && opponents.has("scissors")) {
+        setDescription("Spock smashes Scissors");
+      } else if (opponents.has("scissors") && opponents.has("lizard")) {
+        setDescription("Scissors decapitate Lizard");
+      } else if (opponents.has("lizard") && opponents.has("paper")) {
+        setDescription("Lizard eats Paper");
+      } else if (opponents.has("paper") && opponents.has("spock")) {
+        setDescription("Paper disproves Spock");
+      } else if (opponents.has("spock") && opponents.has("rock")) {
+        setDescription("Spock vaporizes Rock");
+      } else if (opponents.has("scissors") && opponents.has("rock")) {
+        setDescription("Rock crushes Scissors");
+      }
+    }
   }, []);
 
   return (
@@ -69,6 +96,7 @@ function Battle(props) {
             },
           ]}>
           <div id='title' style={{ opacity: "0" }}>
+            {description}
             <Message>{title}</Message>
           </div>
         </Anime>

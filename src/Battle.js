@@ -15,21 +15,54 @@ const Container = styled.div`
   margin-top: 73px;
   color: white;
   text-align: center;
+  @media only screen and (max-width: 700px) {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row dense;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+    column-gap: 20px;
+    row-gap: 40px;
+  }
 `;
 const PickHeader = styled.span`
   letter-spacing: 3px;
   font-weight: 600;
   font-size: 23px;
+  @media only screen and (max-width: 700px) {
+    font-size: 12px;
+  }
+  @media only screen and (max-width: 400px) {
+    order: 1;
+  }
 `;
-const UserPick = styled.div``;
-const ComputerPick = styled.div``;
+const UserPick = styled.div`
+  @media only screen and (max-width: 400px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+const ComputerPick = styled.div`
+  @media only screen and (max-width: 400px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
 const MessageBox = styled.div`
   align-self: center;
   margin: 0 20px;
-  /* display: none; */
+  @media only screen and (max-width: 700px) {
+    grid-column: 1/-1;
+    margin: 20px;
+  }
 `;
 const Message = styled.div`
   font-size: 55px;
+  @media only screen and (max-width: 400px) {
+    font-size: 30px;
+  }
 `;
 
 function Battle(props) {

@@ -13,6 +13,12 @@ const Btn = styled.span`
   right: 30px;
   bottom: 30px;
   cursor: pointer;
+  @media only screen and (max-width: 700px) {
+    position: relative;
+    margin: 20px auto 20px auto;
+    right: 0;
+    bottom: 0;
+  }
 `;
 
 function RulesBtn(props) {

@@ -10,6 +10,9 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 11px 47px;
+  @media only screen and (max-width: 700px) {
+    padding: 11px 20px;
+  }
 `;
 
 const ScoreTitle = styled.div`
@@ -17,6 +20,9 @@ const ScoreTitle = styled.div`
   font-size: 17px;
   font-weight: 600;
   letter-spacing: 2px;
+  @media only screen and (max-width: 700px) {
+    font-size: 14px;
+  }
 `;
 
 const ScoreNumber = styled.div`
@@ -24,6 +30,10 @@ const ScoreNumber = styled.div`
   font-size: 66px;
   line-height: 66px;
   font-weight: 700;
+  @media only screen and (max-width: 700px) {
+    font-size: 40px;
+    line-height: 40px;
+  }
 `;
 
 function ScoreBox(props) {

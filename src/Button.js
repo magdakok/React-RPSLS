@@ -25,7 +25,21 @@ const ContainerBattle = styled(Container)`
   height: 300px;
   margin: 65px 35px;
   position: relative;
-  z-index: 5;
+  @media only screen and (max-width: 1200px) {
+    width: 200px;
+    height: 200px;
+  }
+  @media only screen and (max-width: 700px) {
+    margin: 15px;
+    width: 150px;
+    height: 150px;
+  }
+  @media only screen and (max-width: 400px) {
+    margin: 15px;
+    width: 115px;
+    height: 115px;
+  }
+
   /* &::before {
     content: "";
     display: block;

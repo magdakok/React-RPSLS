@@ -14,6 +14,12 @@ const Container = styled.div`
     var(--gradient-darker)
   );
   width: 100%;
+  @media only screen and (max-width: 700px) {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 function Game() {

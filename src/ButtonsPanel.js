@@ -9,6 +9,13 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 700px) {
+    transform: scale(0.7);
+    margin: 30px auto 40px auto;
+  }
+  @media only screen and (max-width: 400px) {
+    transform: scale(0.65);
+  }
 `;
 
 const Pentagon = styled.div`  

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ButtonsPanel from "./ButtonsPanel";
 import Header from "./Header";
 import Battle from "./Battle";
+import RulesBtn from "./RulesBtn";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -17,6 +18,7 @@ const Container = styled.div`
 
 function Game() {
   const [choice, setChoice] = useState(null);
+  const [points, setPoints] = useState(0);
 
   const makeChoice = (choice) => {
     setChoice(choice);
@@ -28,12 +30,18 @@ function Game() {
 
   return (
     <Container>
-      <Header />
+      <Header points={points} />
       {choice ? (
-        <Battle choice={choice} restart={restart} />
+        <Battle
+          choice={choice}
+          restart={restart}
+          points={points}
+          setPoints={setPoints}
+        />
       ) : (
         <ButtonsPanel makeChoice={makeChoice} />
       )}
+      <RulesBtn />
     </Container>
   );
 }

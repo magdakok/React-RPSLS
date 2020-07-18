@@ -1,7 +1,6 @@
 import React from "react";
 import ScoreBox from "./ScoreBox";
 import styled from "styled-components";
-import { scissors, paper, rock, lizard, spock } from "./rules";
 import logo from "./images/logo-bonus.svg";
 
 const Container = styled.header`
@@ -17,11 +16,11 @@ const Logo = styled.img`
   margin-top: 4px;
 `;
 
-function Header() {
+function Header(props) {
   return (
     <Container>
       <Logo src={logo} alt='Rock, paper, scissors, lizard, Spock game logo' />
-      <ScoreBox />
+      <ScoreBox points={props.points} />
     </Container>
   );
 }

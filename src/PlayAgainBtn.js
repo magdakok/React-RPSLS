@@ -10,8 +10,8 @@ const Btn = styled.div`
   cursor: pointer;
 `;
 
-function PlayAgainBtn() {
-  return <Btn>Play again</Btn>;
+function PlayAgainBtn(props) {
+  return <Btn onClick={() => props.restart()}>Play again</Btn>;
 }
 
 export default PlayAgainBtn;

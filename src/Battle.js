@@ -39,7 +39,7 @@ function Battle(props) {
       </UserPick>
       <MessageBox>
         <Message>You lose</Message>
-        <PlayAgainBtn />
+        <PlayAgainBtn restart={props.restart} />
       </MessageBox>
       <ComputerPick>
         <PickHeader>The house picked</PickHeader>

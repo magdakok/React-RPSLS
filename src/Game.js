@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ButtonsPanel from "./ButtonsPanel";
 import Header from "./Header";
 import { scissors, paper, rock, lizard, spock } from "./rules";
 
@@ -10,13 +11,15 @@ const Container = styled.div`
     var(--gradient-lighter),
     var(--gradient-darker)
   );
-  padding: 50px 25%;
+  padding: 46px 24.3%;
+  width: 100%;
 `;
 
 function Game() {
   return (
     <Container>
       <Header />
+      <ButtonsPanel />
     </Container>
   );
 }

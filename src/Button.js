@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import ReactAnime from "react-animejs";
+const { Anime, stagger } = ReactAnime;
 
 const Container = styled.div`
   border-radius: 100%;
@@ -63,18 +65,40 @@ const Image = styled.img`
 
 function Button(props) {
   return props.symbol ? (
-    <ContainerSmall
-      colorLight={props.symbol.colorLight}
-      colorDark={props.symbol.colorDark}
-      position={props.symbol.position}
-      onClick={() => props.makeChoice(props.symbol.name)}>
-      <SymbolBox>
-        <Image
-          src={require(`./images/icon-${props.symbol.name}.svg`)}
-          alt={`${props.symbol.name} icon`}
-        />
-      </SymbolBox>
-    </ContainerSmall>
+    <Anime
+      initial={[
+        {
+          targets: "#symbolBtn",
+          keyframes: [
+            {
+              scale: 0.6,
+            },
+            {
+              scale: 1.1,
+            },
+            {
+              scale: 1,
+            },
+          ],
+          easing: "spring",
+          duration: 1000,
+          loop: false,
+        },
+      ]}>
+      <ContainerSmall
+        id='symbolBtn'
+        colorLight={props.symbol.colorLight}
+        colorDark={props.symbol.colorDark}
+        position={props.symbol.position}
+        onClick={() => props.makeChoice(props.symbol.name)}>
+        <SymbolBox>
+          <Image
+            src={require(`./images/icon-${props.symbol.name}.svg`)}
+            alt={`${props.symbol.name} icon`}
+          />
+        </SymbolBox>
+      </ContainerSmall>
+    </Anime>
   ) : (
     <ContainerBattle
       colorLight={props.choice.colorLight}

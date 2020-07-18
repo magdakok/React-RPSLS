@@ -3,6 +3,9 @@ import styled from "styled-components";
 import symbols from "./rules";
 import Button from "./Button";
 import PlayAgainBtn from "./PlayAgainBtn";
+import { animationBattle } from "./animations";
+import ReactAnime from "react-animejs";
+const { Anime, stagger } = ReactAnime;
 
 const keys = Object.keys(symbols);
 
@@ -40,10 +43,14 @@ function Battle(props) {
       setTitle(`It's a draw`);
     } else if (symbols[props.choice].beat.includes(computersChoice)) {
       setTitle("You win");
-      props.setPoints(props.points + 1);
+      setTimeout(function () {
+        props.setPoints(props.points + 1);
+      }, 1100);
     } else {
       setTitle("You lose");
-      props.setPoints(props.points - 1);
+      setTimeout(function () {
+        props.setPoints(props.points - 1);
+      }, 1100);
     }
   }, []);
 
@@ -54,12 +61,36 @@ function Battle(props) {
         <Button choice={symbols[props.choice]} />
       </UserPick>
       <MessageBox>
-        <Message>{title}</Message>
+        <Anime
+          initial={[
+            {
+              targets: "#title",
+              ...animationBattle,
+            },
+          ]}>
+          <div id='title' style={{ opacity: "0" }}>
+            <Message>{title}</Message>
+          </div>
+        </Anime>
+
         <PlayAgainBtn restart={props.restart} />
       </MessageBox>
       <ComputerPick>
         <PickHeader>The house picked</PickHeader>
-        <Button choice={symbols[computersChoice]} />
+        <Anime
+          initial={[
+            {
+              targets: "#computerBtn",
+              ...animationBattle,
+            },
+          ]}>
+          <div id='computerBtn'>
+            <Button
+              choice={symbols[computersChoice]}
+              style={{ opacity: "0" }}
+            />
+          </div>
+        </Anime>
       </ComputerPick>
     </Container>
   );

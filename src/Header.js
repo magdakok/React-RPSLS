@@ -5,6 +5,7 @@ import { scissors, paper, rock, lizard, spock } from "./rules";
 import logo from "./images/logo-bonus.svg";
 
 const Container = styled.header`
+  margin: 0px 24.3%;
   border: 3px solid var(--gray);
   border-radius: 16px;
   padding: 17px 23px 13px 28px;

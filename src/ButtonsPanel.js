@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import pentagonShape from "./images/bg-pentagon.svg";
-import { scissors, paper, rock, lizard, spock } from "./rules";
+import symbols from "./rules";
 
 const Container = styled.div`
   margin: 102px auto 40px auto;
@@ -21,15 +21,15 @@ const Pentagon = styled.div`
   position: relative;
   `;
 
-function ButtonsPanel() {
+function ButtonsPanel(props) {
   return (
     <Container>
       <Pentagon>
-        <Button symbol={scissors} />
-        <Button symbol={paper} />
-        <Button symbol={rock} />
-        <Button symbol={lizard} />
-        <Button symbol={spock} />
+        <Button symbol={symbols.scissors} makeChoice={props.makeChoice} />
+        <Button symbol={symbols.paper} makeChoice={props.makeChoice} />
+        <Button symbol={symbols.rock} makeChoice={props.makeChoice} />
+        <Button symbol={symbols.lizard} makeChoice={props.makeChoice} />
+        <Button symbol={symbols.spock} makeChoice={props.makeChoice} />
       </Pentagon>
     </Container>
   );

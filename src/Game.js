@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import ButtonsPanel from "./ButtonsPanel";
 import Header from "./Header";
-import { scissors, paper, rock, lizard, spock } from "./rules";
+import Battle from "./Battle";
 
 const Container = styled.div`
   height: 100vh;
@@ -16,10 +16,20 @@ const Container = styled.div`
 `;
 
 function Game() {
+  const [choice, setChoice] = useState(null);
+
+  const makeChoice = (choice) => {
+    setChoice(choice);
+  };
+
   return (
     <Container>
       <Header />
-      <ButtonsPanel />
+      {choice ? (
+        <Battle choice={choice} />
+      ) : (
+        <ButtonsPanel makeChoice={makeChoice} />
+      )}
     </Container>
   );
 }

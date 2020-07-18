@@ -32,7 +32,8 @@ function Button(props) {
     <Container
       colorLight={props.symbol.colorLight}
       colorDark={props.symbol.colorDark}
-      position={props.symbol.position}>
+      position={props.symbol.position}
+      onClick={() => props.makeChoice(props.symbol.name)}>
       <SymbolBox>
         <img src={symbol} />
       </SymbolBox>

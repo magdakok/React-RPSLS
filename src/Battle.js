@@ -79,7 +79,7 @@ function Battle(props) {
         setDescription("Rock crushes Scissors");
       }
     } else {
-      setDescription("You won! Bazinga!");
+      setDescription("Game over! Bazinga!");
     }
   }, []);
 

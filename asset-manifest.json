@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/React-RPSLS/static/css/main.3b4aeec4.chunk.css",
-    "main.js": "/React-RPSLS/static/js/main.5d8f6804.chunk.js",
-    "main.js.map": "/React-RPSLS/static/js/main.5d8f6804.chunk.js.map",
+    "main.js": "/React-RPSLS/static/js/main.515870ae.chunk.js",
+    "main.js.map": "/React-RPSLS/static/js/main.515870ae.chunk.js.map",
     "runtime-main.js": "/React-RPSLS/static/js/runtime-main.15f5a73d.js",
     "runtime-main.js.map": "/React-RPSLS/static/js/runtime-main.15f5a73d.js.map",
     "static/js/2.2ebead64.chunk.js": "/React-RPSLS/static/js/2.2ebead64.chunk.js",
     "static/js/2.2ebead64.chunk.js.map": "/React-RPSLS/static/js/2.2ebead64.chunk.js.map",
     "index.html": "/React-RPSLS/index.html",
-    "precache-manifest.23613a3822086dee5454cde609ca4d08.js": "/React-RPSLS/precache-manifest.23613a3822086dee5454cde609ca4d08.js",
+    "precache-manifest.30003e6106dc37b78989e624d4c390e2.js": "/React-RPSLS/precache-manifest.30003e6106dc37b78989e624d4c390e2.js",
     "service-worker.js": "/React-RPSLS/service-worker.js",
     "static/css/main.3b4aeec4.chunk.css.map": "/React-RPSLS/static/css/main.3b4aeec4.chunk.css.map",
     "static/js/2.2ebead64.chunk.js.LICENSE.txt": "/React-RPSLS/static/js/2.2ebead64.chunk.js.LICENSE.txt",
@@ -26,6 +26,6 @@
     "static/js/runtime-main.15f5a73d.js",
     "static/js/2.2ebead64.chunk.js",
     "static/css/main.3b4aeec4.chunk.css",
-    "static/js/main.5d8f6804.chunk.js"
+    "static/js/main.515870ae.chunk.js"
   ]
 }

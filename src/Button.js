@@ -18,6 +18,10 @@ const ContainerSmall = styled(Container)`
   position: absolute;
   ${(props) => props.position};
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.2) !important;
+  }
 `;
 
 const ContainerBattle = styled(Container)`

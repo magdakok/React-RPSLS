@@ -6,7 +6,7 @@ import Battle from "./Battle";
 import RulesBtn from "./RulesBtn";
 
 const Container = styled.div`
-  min-height: 100vh;
+  min-height: 768px;
   padding: 46px 0;
   background-image: radial-gradient(
     circle at top,

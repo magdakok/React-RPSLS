@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import rulesImg from "./images/image-rules-bonus.svg";
 import closeImg from "./images/icon-close.svg";
+import ReactAnime from "react-animejs";
+const { Anime } = ReactAnime;
 
 const Btn = styled.span`
   color: white;
@@ -36,8 +38,6 @@ const RulesContainer = styled.div`
 const RulesPopUp = styled.div`
   position: fixed;
   border-radius: 10px;
-  max-width: 600px;
-  max-height: 600px;
   padding: 2%;
   background-color: white;
   left: 50%;
@@ -45,11 +45,33 @@ const RulesPopUp = styled.div`
   transform: translate(-50%, -50%);
   backdrop-filter: blur(10px);
   z-index: 10;
+  @media only screen and (max-width: 700px) {
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
+    width: 100vw;
+    height: 100vh;
+    padding: 30px;
+    border-radius: 0;
+  }
 `;
 
-const ImgBox = styled.img`
+const Img = styled.img`
+  margin: 20px;
   min-width: 500px;
-  min-height: 500px;
+  @media only screen and (max-width: 700px) {
+    min-width: 0;
+    width: 80vw;
+  }
+`;
+
+const ImgBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (max-width: 700px) {
+    height: 80vh;
+  }
 `;
 
 const PopUpRow = styled.div`
@@ -65,7 +87,6 @@ const CloseIcon = styled.img`
 function RulesBtn(props) {
   const [rulesOn, setRulesOn] = useState(false);
 
-  // START WITH THIS! CLICKING ON BACKGROUND SHOULD CLOSE RULES POPUP
   const handleBackgroundClick = (e) => {
     e.target.id === "rulesBackground" && setRulesOn(false);
   };
@@ -85,7 +106,9 @@ function RulesBtn(props) {
               onClick={() => setRulesOn(false)}
             />
           </PopUpRow>
-          <ImgBox src={rulesImg} alt='Game rules' />
+          <ImgBox>
+            <Img src={rulesImg} alt='Game rules' />
+          </ImgBox>
         </RulesPopUp>
       </RulesContainer>
 

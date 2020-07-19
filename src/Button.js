@@ -86,7 +86,7 @@ function Button(props) {
     <Anime
       initial={[
         {
-          targets: "#symbolBtn",
+          targets: ".symbolBtn",
           keyframes: [
             {
               scale: 0.6,
@@ -104,7 +104,7 @@ function Button(props) {
         },
       ]}>
       <ContainerSmall
-        id='symbolBtn'
+        className='symbolBtn'
         colorLight={props.symbol.colorLight}
         colorDark={props.symbol.colorDark}
         position={props.symbol.position}

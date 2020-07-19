@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/React-RPSLS/static/css/main.3b4aeec4.chunk.css",
+    "main.js": "/React-RPSLS/static/js/main.0017a7a1.chunk.js",
+    "main.js.map": "/React-RPSLS/static/js/main.0017a7a1.chunk.js.map",
+    "runtime-main.js": "/React-RPSLS/static/js/runtime-main.15f5a73d.js",
+    "runtime-main.js.map": "/React-RPSLS/static/js/runtime-main.15f5a73d.js.map",
+    "static/js/2.2ebead64.chunk.js": "/React-RPSLS/static/js/2.2ebead64.chunk.js",
+    "static/js/2.2ebead64.chunk.js.map": "/React-RPSLS/static/js/2.2ebead64.chunk.js.map",
+    "index.html": "/React-RPSLS/index.html",
+    "precache-manifest.18cdde3aee75fdbfb1b6bfa819a52eee.js": "/React-RPSLS/precache-manifest.18cdde3aee75fdbfb1b6bfa819a52eee.js",
+    "service-worker.js": "/React-RPSLS/service-worker.js",
+    "static/css/main.3b4aeec4.chunk.css.map": "/React-RPSLS/static/css/main.3b4aeec4.chunk.css.map",
+    "static/js/2.2ebead64.chunk.js.LICENSE.txt": "/React-RPSLS/static/js/2.2ebead64.chunk.js.LICENSE.txt",
+    "static/media/bg-pentagon.svg": "/React-RPSLS/static/media/bg-pentagon.aced7052.svg",
+    "static/media/icon-close.svg": "/React-RPSLS/static/media/icon-close.919ab92a.svg",
+    "static/media/icon-lizard.svg": "/React-RPSLS/static/media/icon-lizard.7d2e0b18.svg",
+    "static/media/icon-paper.svg": "/React-RPSLS/static/media/icon-paper.69a8c2e9.svg",
+    "static/media/icon-rock.svg": "/React-RPSLS/static/media/icon-rock.8ce1e109.svg",
+    "static/media/icon-scissors.svg": "/React-RPSLS/static/media/icon-scissors.bec2f9b3.svg",
+    "static/media/icon-spock.svg": "/React-RPSLS/static/media/icon-spock.b6446e8e.svg",
+    "static/media/image-rules-bonus.svg": "/React-RPSLS/static/media/image-rules-bonus.bab8b554.svg",
+    "static/media/logo-bonus.svg": "/React-RPSLS/static/media/logo-bonus.f4c973f7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.15f5a73d.js",
+    "static/js/2.2ebead64.chunk.js",
+    "static/css/main.3b4aeec4.chunk.css",
+    "static/js/main.0017a7a1.chunk.js"
+  ]
+}

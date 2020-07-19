@@ -5,7 +5,7 @@ import Button from "./Button";
 import PlayAgainBtn from "./PlayAgainBtn";
 import { animationBattle } from "./animations";
 import ReactAnime from "react-animejs";
-const { Anime, stagger } = ReactAnime;
+const { Anime } = ReactAnime;
 
 const keys = Object.keys(symbols);
 

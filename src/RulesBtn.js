@@ -42,13 +42,13 @@ const RulesContainer = styled.div`
 `;
 const RulesPopUp = styled.div`
   position: fixed;
+  display: ${(props) => (props.rulesOn ? "block" : "none")};
   border-radius: 10px;
   padding: 2%;
   background-color: white;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  backdrop-filter: blur(10px);
   z-index: 10;
   @media only screen and (max-width: 700px) {
     left: 0;
@@ -106,7 +106,7 @@ function RulesBtn(props) {
         id='rulesBackground'
         rulesOn={rulesOn}
         onClick={handleBackgroundClick}>
-        <RulesPopUp>
+        <RulesPopUp id='pop-up' rulesOn={rulesOn}>
           <PopUpRow>
             <span>Rules</span>
             <CloseIcon
@@ -120,8 +120,17 @@ function RulesBtn(props) {
           </ImgBox>
         </RulesPopUp>
       </RulesContainer>
-
-      <Btn onClick={() => setRulesOn(!rulesOn)}>Rules</Btn>
+      <Anime
+        _onClick={[
+          {
+            targets: "#pop-up",
+            opacity: 1,
+            easing: "linear",
+            duration: 200,
+          },
+        ]}>
+        <Btn onClick={() => setRulesOn(!rulesOn)}>Rules</Btn>
+      </Anime>
     </>
   );
 }
